@@ -1,1 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About OrionPulse — Building the Intelligence Layer for Business</title>
+  <meta name="description" content="OrionPulse Technologies is building toward an AI Business Operating System—unifying tools, workflows, data, and autonomous AI workforces into one connected intelligence system.">
+  <link rel="canonical" href="https://orionpulse.co.in/about">
 
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://orionpulse.co.in/about">
+  <meta property="og:title" content="About OrionPulse — Building the Intelligence Layer for Business">
+  <meta property="og:description" content="From disconnected tools to connected intelligence. Discover how OrionPulse is evolving modern business infrastructure through AI, automation, and agentic workflows.">
+  <meta property="og:site_name" content="OrionPulse Technologies OPC Private Limited">
+
+  <!-- Typography & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..700;1,300..700&family=Space+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "OrionPulse Technologies OPC Private Limited",
+    "alternateName": "OrionPulse",
+    "url": "https://orionpulse.co.in",
+    "email": "service@orionpulse.co.in",
+    "telephone": "+919862903690",
+    "description": "OrionPulse helps businesses grow through AI, automation, digital marketing, SEO, websites, and intelligent growth systems.",
+    "knowsAbout": ["AI Business Operating Systems", "Agentic AI Workforces", "AI Lead Enrichment", "Business Automation", "Intelligent Workflows"]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-void: #02050e;
+      --bg-surface: #070c18;
+      --bg-card: rgba(15, 23, 42, 0.65);
+      --bg-card-hover: rgba(30, 41, 59, 0.75);
+      
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-glass: rgba(255, 255, 255, 0.12);
+      --border-accent: rgba(59, 130, 246, 0.4);
+      --border-cyan: rgba(6, 182, 212, 0.4);
+      
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      
+      --accent-pulse: #3b82f6;
+      --accent-pulse-glow: rgba(59, 130, 246, 0.35);
+      --accent-cyan: #06b6d4;
+      --accent-cyan-glow: rgba(6, 182, 212, 0.3);
+      --accent-amber: #f59e0b;
+      --accent-emerald: #10b981;
+      
+      --font-heading: 'Space Grotesk', -apple-system, sans-serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      
+      --max-width: 1240px;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 24px;
+      
+      --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-void);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Ambient Background Canvas */
+    #space-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.75;
+    }
+
+    /* Radial Glow Overlays */
+    .glow-overlay-1 {
+      position: absolute;
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(6, 182, 212, 0.05) 50%, rgba(0,0,0,0) 70%);
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Shared Layout & Utility Classes */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-padding {
+      padding: 130px 0;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: rgba(59, 130, 246, 0.08);
+      border: 1px solid var(--border-accent);
+      backdrop-filter: blur(8px);
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-pulse);
+      margin-bottom: 20px;
+    }
+
+    .tag-cyan {
+      background: rgba(6, 182, 212, 0.08);
+      border-color: var(--border-cyan);
+      color: var(--accent-cyan);
+    }
+
+    .tag-dot {
+      width: 6px;
+      height: 6px;
+      background-color: var(--accent-pulse);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent-pulse);
+    }
+
+    .tag-cyan .tag-dot {
+      background-color: var(--accent-cyan);
+      box-shadow: 0 0 8px var(--accent-cyan);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-heading);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+
+    .heading-lg {
+      font-size: clamp(34px, 5.2vw, 60px);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+    }
+
+    .subheading {
+      font-size: clamp(16px, 2vw, 20px);
+      color: var(--text-secondary);
+      max-width: 720px;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #ffffff 20%, #93c5fd 60%, var(--accent-pulse) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gradient-cyan {
+      background: linear-gradient(135deg, #ffffff 20%, #a5f3fc 60%, var(--accent-cyan) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Glassmorphism Card Style */
+    .glass-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: var(--radius-md);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    }
+
+    /* Navigation */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(2, 5, 14, 0.8);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: var(--transition-smooth);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #1e3a8a, var(--accent-pulse));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      box-shadow: 0 0 20px var(--accent-pulse-glow);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .brand-text {
+      font-family: var(--font-heading);
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: var(--transition-smooth);
+    }
+
+    .nav-link:hover {
+      color: var(--text-primary);
+    }
+
+    .btn-nav {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-glass);
+      color: var(--text-primary);
+      padding: 9px 20px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-nav:hover {
+      background: var(--text-primary);
+      color: var(--bg-void);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding-top: 190px;
+      padding-bottom: 110px;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-top: 40px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-pulse), #2563eb);
+      color: white;
+      padding: 15px 30px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: var(--transition-smooth);
+      box-shadow: 0 0 28px var(--accent-pulse-glow);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 40px rgba(59, 130, 246, 0.65);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-glass);
+      color: var(--text-primary);
+      padding: 15px 30px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    /* Hero Orbital Telemetry Visual */
+    .hero-visual {
+      position: relative;
+      height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .orbit-ring {
+      position: absolute;
+      border: 1px dashed rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      animation: spin 45s linear infinite;
+    }
+
+    .orbit-1 { width: 380px; height: 380px; }
+    .orbit-2 { width: 250px; height: 250px; animation-duration: 28s; animation-direction: reverse; }
+
+    .orbit-core {
+      width: 110px;
+      height: 110px;
+      background: radial-gradient(circle, var(--accent-pulse) 0%, rgba(2,5,14,0.9) 80%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 60px var(--accent-pulse-glow);
+      border: 1px solid var(--accent-pulse);
+      z-index: 2;
+    }
+
+    .orbit-node {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid var(--border-accent);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-cyan);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+      backdrop-filter: blur(8px);
+    }
+
+    .node-p1 { top: 10px; left: 50%; transform: translateX(-50%); }
+    .node-p2 { bottom: 35px; left: 25px; }
+    .node-p3 { bottom: 35px; right: 25px; }
+    .node-p4 { top: 50%; right: 0; transform: translateY(-50%); }
+
+    @keyframes spin {
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Structural Narrative & Progression */
+    .evolution-stepper {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 12px;
+      margin-top: 40px;
+      align-items: center;
+    }
+
+    .step-box {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid var(--border-subtle);
+      padding: 18px 12px;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      transition: var(--transition-smooth);
+    }
+
+    .step-box.highlight {
+      border-color: var(--accent-cyan);
+      color: var(--text-primary);
+      background: rgba(6, 182, 212, 0.1);
+      box-shadow: 0 0 20px var(--accent-cyan-glow);
+    }
+
+    .step-arrow {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    /* Origin Story */
+    .origin-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .origin-card {
+      padding: 44px;
+    }
+
+    /* AI Workforce Grid */
+    .agent-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .agent-card {
+      padding: 32px;
+      transition: var(--transition-smooth);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .agent-card:hover {
+      border-color: var(--border-cyan);
+      transform: translateY(-4px);
+      background: rgba(30, 41, 59, 0.85);
+      box-shadow: 0 12px 32px rgba(6, 182, 212, 0.15);
+    }
+
+    .agent-card.featured {
+      border-color: var(--border-cyan);
+      background: linear-gradient(180deg, rgba(6, 182, 212, 0.08) 0%, rgba(15, 23, 42, 0.7) 100%);
+    }
+
+    .agent-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(6, 182, 212, 0.1);
+      border: 1px solid var(--border-cyan);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-cyan);
+      margin-bottom: 20px;
+    }
+
+    .agent-title {
+      font-size: 19px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .agent-desc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .agent-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 16px;
+      margin-top: auto;
+    }
+
+    .status-pill {
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-weight: 600;
+      font-family: var(--font-mono);
+    }
+
+    .status-active { background: rgba(16, 185, 129, 0.12); color: var(--accent-emerald); border: 1px solid rgba(16, 185, 129, 0.3); }
+    .status-dev { background: rgba(245, 158, 11, 0.12); color: var(--accent-amber); border: 1px solid rgba(245, 158, 11, 0.3); }
+
+    .btn-agent-trigger {
+      background: none;
+      border: none;
+      color: var(--accent-cyan);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-agent-trigger:hover {
+      color: var(--text-primary);
+    }
+
+    /* AI Lead Enrichment Spotlight Modal Overlay */
+    .agent-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(2, 5, 14, 0.88);
+      backdrop-filter: blur(20px);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--transition-smooth);
+    }
+
+    .agent-modal-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .agent-modal {
+      width: 90%;
+      max-width: 860px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 40px;
+      position: relative;
+      border-color: var(--border-cyan);
+      box-shadow: 0 0 50px rgba(6, 182, 212, 0.25);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-glass);
+      color: var(--text-secondary);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .modal-close-btn:hover {
+      color: var(--text-primary);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .pipeline-step-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .pipeline-step-card {
+      background: rgba(2, 5, 14, 0.6);
+      border: 1px solid var(--border-subtle);
+      padding: 16px;
+      border-radius: var(--radius-sm);
+    }
+
+    .pipeline-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent-cyan);
+      margin-bottom: 6px;
+    }
+
+    .pipeline-title {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .pipeline-desc {
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .schema-preview {
+      background: #020712;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: #38bdf8;
+      overflow-x: auto;
+      line-height: 1.5;
+    }
+
+    /* Section 08: Operating System Layers (Interactive) */
+    .layers-layout {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 40px;
+      margin-top: 48px;
+      align-items: start;
+    }
+
+    .layer-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .layer-item {
+      padding: 16px 22px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: var(--transition-smooth);
+    }
+
+    .layer-item:hover, .layer-item.active {
+      background: rgba(30, 41, 59, 0.85);
+      border-color: var(--accent-pulse);
+      transform: translateX(4px);
+    }
+
+    .layer-num {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--accent-pulse);
+      font-weight: 600;
+    }
+
+    .layer-name {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .layer-display-card {
+      padding: 40px;
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-color: var(--border-accent);
+    }
+
+    .integration-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .chip {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-glass);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-family: var(--font-mono);
+      color: var(--text-secondary);
+    }
+
+    /* Principles Grid */
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .principle-card {
+      padding: 36px;
+    }
+
+    .principle-num {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--accent-pulse);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+       <!-- Section 14 & 20: Final Manifesto & Call to Action -->
+    <section class="manifesto-section">
+      <div class="container">
+        <div class="tag"><span class="tag-dot"></span> The Road Ahead</div>
+        <h2 class="heading-lg" style="max-width: 800px; margin: 0 auto 24px auto;">Today, businesses operate software.<br><span class="gradient-text">Tomorrow, businesses will operate intelligence.</span></h2>
+        <p class="subheading" style="margin: 0 auto 40px auto;">Start building your connected growth engine with OrionPulse today.</p>
+        
+        <div class="hero-cta-group" style="justify-content: center;">
+          <a href="https://wa.me/919862903690?text=Hi%20OrionPulse%20team,%20I%20am%20ready%20to%20build%20our%20intelligent%20business%20system." target="_blank" class="btn-primary">
+            Start Building Your Engine <i data-lucide="arrow-right" size="16"></i>
+          </a>
+          <a href="mailto:service@orionpulse.co.in?subject=Inquiry%3A%20AI%20Business%20System%20Deployment" class="btn-secondary">
+            <i data-lucide="mail" size="16"></i> Email Strategy Desk
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- AI Lead Enrichment Agent Modal Overlay -->
+  <div class="agent-modal-overlay" id="agent-modal-overlay" onclick="closeAgentModalOnBg(event)">
+    <div class="glass-card agent-modal">
+      <button class="modal-close-btn" onclick="closeAgentModal()"><i data-lucide="x" size="18"></i></button>
+      
+      <div class="tag tag-cyan"><i data-lucide="cpu" size="14"></i> Agent Technical Architecture</div>
+      <h3 style="font-size: 26px; font-weight: 700; font-family: var(--font-heading); margin-bottom: 8px;">AI Lead Enrichment Agent</h3>
+      <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 24px;">Captures raw, low-intent prospect triggers and executes real-time identity, firmographic, technographic, and intent synthesis.</p>
+
+      <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted);">4-Stage Execution Pipeline</div>
+      <div class="pipeline-step-grid">
+        <div class="pipeline-step-card">
+          <div class="pipeline-num">01 / SIGNAL</div>
+          <div class="pipeline-title">Raw Trigger</div>
+          <div class="pipeline-desc">Captures email/domain via webhook on form submit.</div>
+        </div>
+        <div class="pipeline-step-card">
+          <div class="pipeline-num">02 / SCRAPE</div>
+          <div class="pipeline-title">Deep Scrape</div>
+          <div class="pipeline-desc">Fetches DNS, tech stack, funding, & registry logs.</div>
+        </div>
+        <div class="pipeline-step-card">
+          <div class="pipeline-num">03 / SYNTHESIS</div>
+          <div class="pipeline-title">LLM Scoring</div>
+          <div class="pipeline-desc">Evaluates ICP fit score (0-100) & outreach angles.</div>
+        </div>
+        <div class="pipeline-step-card">
+          <div class="pipeline-num">04 / DISPATCH</div>
+          <div class="pipeline-title">CRM Sync</div>
+          <div class="pipeline-desc">Injects enriched JSON payload to CRM & Slack.</div>
+        </div>
+      </div>
+
+      <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 8px;">Enrichment JSON Payload Output Spec</div>
+      <div class="schema-preview">
+{
+  "prospect": { "email": "alex@acme.corp", "verified_mx": true },
+  "firmographics": { "company": "Acme Corp", "employees": "250-500", "est_revenue": "$45M" },
+  "technographics": ["Salesforce", "HubSpot", "AWS", "Segment"],
+  "intelligence": {
+    "icp_fit_score": 94,
+    "buying_intent": "HIGH",
+    "insights": ["Recent Series B funding", "Actively hiring AI Engineers"]
+  }
+}
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#" class="brand" style="margin-bottom: 18px;">
+            <div class="brand-icon"><i data-lucide="orbit" size="20"></i></div>
+            <span class="brand-text">OrionPulse</span>
+          </a>
+          <p style="color: var(--text-secondary); font-size: 13px; max-width: 320px; line-height: 1.6;">
+            OrionPulse Technologies OPC Private Limited.<br>
+            Building practical AI infrastructure, automation, and intelligent growth systems.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Core Systems</h5>
+          <ul class="footer-links">
+            <li><a href="#workforce" onclick="openAgentModal()">Lead Enrichment Agent</a></li>
+            <li><a href="#workforce">AI Voice Support</a></li>
+            <li><a href="#workforce">AI WhatsApp Agent</a></li>
+            <li><a href="#operating-system">Operating System Layers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul class="footer-links">
+            <li><a href="#origin">Our Origin Story</a></li>
+            <li><a href="#problem">Evolution Model</a></li>
+            <li><a href="#principles">Principles</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Contact Channels</h5>
+          <ul class="footer-links">
+            <li><a href="mailto:service@orionpulse.co.in"><i data-lucide="mail" size="12"></i> service@orionpulse.co.in</a></li>
+            <li><a href="https://wa.me/919862903690" target="_blank"><i data-lucide="phone" size="12"></i> +91 9862903690</a></li>
+            <li><a href="#">Motbung, Manipur, India</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="legal-bar">
+        <div>&copy; 2026 OrionPulse Technologies OPC Private Limited. All rights reserved.</div>
+        <div style="display: flex; gap: 24px;">
+          <a href="#" style="color: var(--text-muted); text-decoration: none;">Privacy Policy</a>
+          <a href="#" style="color: var(--text-muted); text-decoration: none;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Logic & Scripts -->
+  <script>
+    // 01. Initialize Lucide Icons
+    lucide.createIcons();
+
+    // 02. Ambient Starfield & Signal Telemetry Canvas Animation
+    const canvas = document.getElementById('space-canvas');
+    const ctx = canvas.getContext('2d');
+    let stars = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    function initStars() {
+      stars = [];
+      const numStars = Math.floor((canvas.width * canvas.height) / 6000);
+      for (let i = 0; i < numStars; i++) {
+        stars.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          radius: Math.random() * 1.3 + 0.3,
+          alpha: Math.random() * 0.7 + 0.1,
+          speed: Math.random() * 0.006 + 0.002
+        });
+      }
+    }
+
+    function animateStars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      stars.forEach(star => {
+        star.alpha += Math.sin(Date.now() * star.speed) * 0.01;
+        ctx.fillStyle = `rgba(255, 255, 255, ${Math.abs(star.alpha)})`;
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      requestAnimationFrame(animateStars);
+    }
+
+    window.addEventListener('resize', () => { resizeCanvas(); initStars(); });
+    resizeCanvas();
+    initStars();
+    animateStars();
+
+    // 03. Interactive 11-Layer Operating System Visualizer
+    const osLayers = [
+      { num: "01", name: "Experience Layer", desc: "Multi-channel user interfaces including Web Apps, WhatsApp, Voice Streams, and Mobile Touchpoints.", items: ["Websites", "WhatsApp", "Voice API", "Custom Portals"] },
+      { num: "02", name: "Identity & Security", desc: "Governance, enterprise authentication, role-based controls, and voiceprint verification.", items: ["OAuth2", "Voiceprint Auth", "RBAC Security", "Audit Logs"] },
+      { num: "03", name: "Data Layer", desc: "Structured and unstructured data repositories capturing customer interactions and company records.", items: ["Supabase", "PostgreSQL", "Vector Stores", "Redis"] },
+      { num: "04", name: "Knowledge Layer", desc: "Dynamic Retrieval-Augmented Generation (RAG) querying internal docs and live knowledge bases.", items: ["Drive Docs", "Internal FAQs", "API Docs", "Notion DB"] },
+      { num: "05", name: "Intelligence Layer", desc: "Advanced LLM reasoning engine evaluating intent, emotion, sentiment, and context.", items: ["Gemini LLMs", "Custom Models", "Sentiment Classifiers"] },
+      { num: "06", name: "AI Agents Layer", desc: "Autonomous digital workers executing specialized tasks (Lead Enrichment, Voice Support, Negotiation).", items: ["Lead Enrichment Agent", "Voice Agent", "WhatsApp Agent", "SDR Agent"] },
+      { num: "07", name: "Orchestration Layer", desc: "State management, workflow logic routing, and multi-agent coordination frameworks.", items: ["n8n", "LangGraph", "Custom Routers", "Event Bus"] },
+      { num: "08", name: "Business Logic Layer", desc: "Custom business rules, compliance guardrails, refund limits, and approval policies.", items: ["Compliance Rules", "Refund Caps", "SLA Monitors"] },
+      { num: "09", name: "Actions & Integrations", desc: "Bi-directional API connectors executing operational changes across enterprise software.", items: ["Google Workspace", "CRMs", "Gmail", "Payment APIs"] },
+      { num: "10", name: "Analytics & Observability", desc: "Real-time telemetry, token optimization, latency tracking, and conversion analytics.", items: ["Latency Metrics", "CSAT Telemetry", "Cost Trackers"] },
+      { num: "11", name: "Evolution Layer", desc: "Continuous feedback loops retraining prompts and refining agent behavior based on real outcomes.", items: ["RLHF Feedback", "Prompt Versioning", "Outcome Logs"] }
+    ];
+
+    const selectorRoot = document.getElementById('layer-selector-root');
+    const displayRoot = document.getElementById('layer-display-root');
+
+    function renderLayers(activeIndex = 5) { // Default active: Layer 06 (AI Agents Layer)
+      selectorRoot.innerHTML = osLayers.map((layer, index) => `
+        <div class="layer-item ${index === activeIndex ? 'active' : ''}" onclick="renderLayers(${index})">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <span class="layer-num">${layer.num}</span>
+            <span class="layer-name">${layer.name}</span>
+          </div>
+          <i data-lucide="chevron-right" size="14" style="color: var(--text-muted);"></i>
+        </div>
+      `).join('');
+
+      const active = osLayers[activeIndex];
+      displayRoot.innerHTML = `
+        <div>
+          <div class="tag tag-cyan"><span class="tag-dot"></span> Layer ${active.num} Visualization</div>
+          <h3 style="font-size: 26px; font-weight: 700; font-family: var(--font-heading); margin-bottom: 12px;">${active.name}</h3>
+          <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.6;">${active.desc}</p>
+        </div>
+        <div>
+          <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 12px;">Supported Connected Technologies</div>
+          <div class="integration-pills">
+            ${active.items.map(item => `<span class="chip">${item}</span>`).join('')}
+          </div>
+        </div>
+      `;
+      lucide.createIcons();
+    }
+
+    renderLayers(5);
+
+    // 04. Modal Control Logic
+    const modalOverlay = document.getElementById('agent-modal-overlay');
+
+    function openAgentModal() {
+      modalOverlay.classList.add('open');
+    }
+
+    function closeAgentModal() {
+      modalOverlay.classList.remove('open');
+    }
+
+    function closeAgentModalOnBg(e) {
+      if (e.target === modalOverlay) {
+        closeAgentModal();
+      }
+    }
+  </script>
+</body>
+</html>
